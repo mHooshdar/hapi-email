@@ -1,0 +1,18 @@
+{
+  "name": "hapi-aut",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@hapi/hapi": "^20.0.0",
+    "imap-simple": "^5.0.0",
+    "lodash": "^4.17.20",
+    "mailparser": "^2.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  }
+}
