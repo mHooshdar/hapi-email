@@ -1,4 +1,6 @@
 'use strict';
+// * setup environment variables
+require('dotenv').config();
 // * node_modules
 const Hapi = require('@hapi/hapi');
 const imaps = require('imap-simple');
@@ -15,7 +17,11 @@ const {
 
 const init = async () => {
   const server = Hapi.server(serverConfig);
-  const imapConnection = await imaps.connect(imapConfig);
+  try {
+    const imapConnection = await imaps.connect(imapConfig);
+  } catch (e) {
+    console.log('Error is: ', e.type);
+  }
 
   // * inbox
   server.route(inboxGet(imapConnection));

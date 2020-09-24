@@ -1,16 +1,15 @@
 // * node_modules
-const nodemailer = require('nodemailer');
-
+const nodemailer = require("nodemailer");
 
 const serverConfig = {
   port: 3000,
-  host: 'localhost',
+  host: "localhost",
 };
 
 const userDetail = {
-  user: 'MAIL',
-  password: 'PASSWORD',
-  host: 'webmail.aut.ac.ir',
+  user: process.env.USERNAME,
+  password: process.env.PASSWORD,
+  host: "webmail.aut.ac.ir",
   imapPort: 993,
   smtpPort: 25,
 };
